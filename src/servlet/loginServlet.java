@@ -1,5 +1,6 @@
 package servlet;
 
+
 import dao.AccountDao;
 import dao.impl.AccountDaoImpl;
 import model.Account;
@@ -40,15 +41,13 @@ public class loginServlet extends HttpServlet{
                 String roleCode = account.getPermission();
                 switch(roleCode) {
                     case "manager":
-                        //request.getRequestDispatcher("/WEB-INF/jsp/adminMain.jsp").forward(request, response);
-                        response.sendRedirect("adminMain");
+                        request.getRequestDispatcher("/WEB-INF/view/admin/adminMain.jsp").forward(request, response);
                         break;
                     case "doctor":
-                        response.sendRedirect("doctorMain");
+                        request.getRequestDispatcher("/WEB-INF/view/doctor/doctorMain.jsp").forward(request, response);
                         break;
                     case "patient":
-                        //request.getRequestDispatcher("/WEB-INF/jsp/developMain.jsp").forward(request, response);
-                        response.sendRedirect("patientMain");
+                        request.getRequestDispatcher("/WEB-INF/view/patient/patientMain.jsp").forward(request, response);
                         break;
                 }
                 return;

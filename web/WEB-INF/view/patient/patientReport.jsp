@@ -23,29 +23,39 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="resources/css/login.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/noscript.css"/>
 </head>
 <body>
     <div class="container-fluid">
         <div class="col-sm-13">
             <div class="panel panel-info">
-                <div class="panel-heading"><h4><span class="glyphicon glyphicon-user">　診斷報告</span></h4></div>
+                <div class="panel-heading"><h4><span class="glyphicon glyphicon-user"></span></h4></div>
                 <div class="panel-body">
                     <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <th colspan="5" class="text-center">個人資料</th>
+                            <th colspan="8" class="text-center">診斷報告</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <th class="text-center">帳號</th>
-                            <th class="text-center">姓名</th>
-                            <th class="text-center">權限</th>
-                            <th class="text-center">電子郵件</th>
+                            <th class="text-center">就醫日期</th>
+                            <th class="text-center">醫事機構</th>
+                            <th class="text-center">看診醫師</th>
+                            <th class="text-center">疾病分類名稱</th>
+                            <th class="text-center">藥品代碼</th>
+                            <th class="text-center">藥品名稱</th>
+                            <th class="text-center">給藥日數</th>
+                            <th class="text-center">藥品用量</th>
                         </tr>
                         <c:forEach items="${memberList}" var="member" varStatus="status">
                             <tr class="text-center">
+                                <td>${member.getIdNumber()}</td>
+                                <td>${member.getChineseName()}</td>
+                                <td>${member.getPhone()}</td>
+                                <td>${member.getEmail()}</td>
                                 <td>${member.getIdNumber()}</td>
                                 <td>${member.getChineseName()}</td>
                                 <td>${member.getPhone()}</td>
@@ -54,48 +64,21 @@
                         </c:forEach>
                         <c:if test = "${fn:length(memberList) == 0}">
                             <tr class="text-center">
-                                <td colspan="5">查無資料</td>
+                                <td colspan="8">查無資料</td>
                             </tr>
                         </c:if>
                         </tbody>
                     </table>
-                    <button type='button' data-toggle='modal' data-target='#insert' class='btn btn-primary'>修改</button>
+<%--                    <button type='button' data-toggle='modal' data-target='#insert' class='btn btn-primary'>修改</button>--%>
                 </div>
             </div>
         </div>
 </div><!-- /container -->
-<form name="myForm" action="patientData" method="POST">
-    <div class="modal fade" id="insert" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="title">新增帳戶</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="account" class="col-form-label">職員編號：</label>
-                        <input type="text" class="form-control" id="account" name="account" value="${latestId}" readonly="readonly" required>
-                        <label for="chinese_name" class="col-form-label">中文名：</label>
-                        <input type="text" class="form-control" id="chinese_name" name="chinese_name" required>
-                        <label for="english_name" class="col-form-label">英文名：</label>
-                        <input type="text" class="form-control" id="english_name" name="english_name" required>
-                        <label for="role_code" class="col-form-label">角色代碼：</label>
-                        <select class="form-control" id="role_code" name="role_code">
-                            <option value="1">1：Product Owner</option>
-                            <option value="2">2：Developer</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                    <input type="submit" class="btn btn-info" value="修改">
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -8,10 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top" style="width: 100%;height: 60px">
     <ul class="navbar-nav">
-        <div class="nav-item">
+        <div class="nav-item" style="position:absolute;">
             <a class="nav-link" href="patientMain">回首頁</a>
         </div>
-        <div class="nav-item" style="right: 0px;position: fixed">
+        <div class="nav-item" style="right: 0px;position:absolute;">
             <a class="nav-link" href="logout">登出/病患</a>
         </div>
     </ul>

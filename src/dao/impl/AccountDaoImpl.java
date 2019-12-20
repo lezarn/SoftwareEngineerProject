@@ -3,9 +3,11 @@ package dao.impl;
 import dao.AccountDao;
 import dbconn.DbConn;
 import model.Account;
-import org.apache.commons.codec.digest.DigestUtils;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,7 +45,8 @@ public class AccountDaoImpl implements AccountDao {
                     Account account = new Account(
                             resultSet.getString("id_account"),
                             resultSet.getString("password"),
-                            resultSet.getString("permission")
+                            resultSet.getString("permission"),
+                            Integer.parseInt(resultSet.getString("FHIRid"))
 //                            resultSet.getInt("id_number"),
 //                            resultSet.getString("head_image"),
 //                            resultSet.getString("register_number"),
@@ -88,7 +91,8 @@ public class AccountDaoImpl implements AccountDao {
                 Account account = new Account(
                         resultSet.getString("id_account"),
                         resultSet.getString("password"),
-                        resultSet.getString("permission")
+                        resultSet.getString("permission"),
+                        Integer.parseInt(resultSet.getString("FHIRid"))
 //                        resultSet.getInt("id_number"),
 //                        resultSet.getString("head_image"),
 //                        resultSet.getString("register_number"),
@@ -163,7 +167,8 @@ public class AccountDaoImpl implements AccountDao {
                 account = new Account(
                         resultSet.getString("id_account"),
                         resultSet.getString("password"),
-                        resultSet.getString("permission")
+                        resultSet.getString("permission"),
+                        Integer.parseInt(resultSet.getString("FHIRid"))
 //                        resultSet.getInt("id_number"),
 //                        resultSet.getString("head_image"),
 //                        resultSet.getString("register_number"),

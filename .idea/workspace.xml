@@ -51,6 +51,7 @@
       <list>
         <option value="CSS File" />
         <option value="jsf" />
+        <option value="JUnit5 Test Class" />
         <option value="Jsp File" />
         <option value="Class" />
       </list>
@@ -72,8 +73,15 @@
   <component name="ProjectId" id="1R0JzEgImqN5zOjbtFs0eBulMEw" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -83,23 +91,28 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="servlet" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bao\IdeaProjects\GG\web\WEB-INF\view\doctor" />
+      <recent name="C:\Users\bao\IdeaProjects\GG\web\assets\css\images" />
       <recent name="C:\Users\bao\IdeaProjects\GG\web\WEB-INF\view\menuBar" />
       <recent name="C:\Users\bao\IdeaProjects\GG\web\WEB-INF\view\patient" />
       <recent name="C:\Users\bao\IdeaProjects\GG\src\fhirApi" />
-      <recent name="C:\Users\bao\IdeaProjects\GG\web\resources\css" />
-      <recent name="C:\Users\bao\IdeaProjects\GG\web\resources\image" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="model" />
       <recent name="servlet" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bao\IdeaProjects\GG\web\assets" />
       <recent name="C:\Users\bao\IdeaProjects\GG\src\fhirApi" />
       <recent name="C:\Users\bao\IdeaProjects\GG\web" />
       <recent name="C:\Users\bao\IdeaProjects\GG\web\WEB-INF\lib" />
       <recent name="C:\Users\bao\IdeaProjects\GG\web\WEB-INF\view\patient" />
-      <recent name="C:\Users\bao\IdeaProjects\GG\web\WEB-INF\view\admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -238,8 +251,9 @@
       <workItem from="1574388147507" duration="17524000" />
       <workItem from="1574658324679" duration="2239000" />
       <workItem from="1576201480454" duration="21988000" />
-      <workItem from="1576564060605" duration="1090000" />
-      <workItem from="1576567174487" duration="10204000" />
+      <workItem from="1576564060605" duration="27377000" />
+      <workItem from="1576744749203" duration="2029000" />
+      <workItem from="1576746952693" duration="3728000" />
     </task>
     <servers />
   </component>

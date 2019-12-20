@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class DbConn {
 
     public final static String MEDICALRECORD = "medical_record";
-    //public final static String MEDICAL_CACHE = "medical_record_cache";
+    public final static String MEDICAL_CACHE = "medical_record_cache";
 
     public static Connection getConnection(String dbName) {
         return getConnection(dbName, "root", "password");

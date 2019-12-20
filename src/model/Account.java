@@ -1,8 +1,6 @@
 package model;
 
 import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.List;
 
 public class Account implements Authenticate{
     private boolean exist;
@@ -10,6 +8,7 @@ public class Account implements Authenticate{
     private String id_account;
     private String password;
     private String permission;
+    private int FHIRid;
 //    private int idNumber;
 //    private String image;
 //    private String regNumber;
@@ -23,7 +22,7 @@ public class Account implements Authenticate{
 //    private String phone;
 
     //public Account(int idNumber, String image, String regNumber, String password , String chinese_name, String english_name, String nickname, int role_code, String role_name, String email, String phone) throws SQLException {
-    public Account(String id_account,String password,String permission) throws SQLException {
+    public Account(String id_account,String password,String permission,int FHIRid) throws SQLException {
 //        if (regNumber == null) {
 //            throw new IllegalArgumentException("帳號為null");
 //        }
@@ -31,6 +30,7 @@ public class Account implements Authenticate{
         this.id_account = id_account;
         this.password = password;
         this.permission = permission;
+        this.FHIRid = FHIRid;
 //        this.idNumber = idNumber;
 //        this.image = image;
 //        this.regNumber = regNumber;
@@ -55,6 +55,9 @@ public class Account implements Authenticate{
 
     public String getPermission(){return permission;}
 
+    public int getFHIRid() {
+        return FHIRid;
+    }
 //    public int getIdNumber(){return idNumber;}
 //
 //    public String getImage(){return image;}

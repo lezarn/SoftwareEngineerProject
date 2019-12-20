@@ -12,8 +12,8 @@
 <%--    <link rel="stylesheet" href="resources/css/bootstrap.min.css">--%>
 <%--    <link rel="stylesheet" type="text/css" href="resources/css/login.css">--%>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="login_assets/css/main.css"/>
-    <noscript><link rel="stylesheet" href="login_assets/css/noscript.css"/></noscript>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
 </head>
 <%--<body>--%>
 <%--<div class="container">--%>
@@ -60,7 +60,6 @@
         document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
     }
 </script>
-
 </body>
 
 <%--</body>--%>

@@ -8,11 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top" style="width: 100%;height: 60px">
     <ul class="navbar-nav">
-        <div class="nav-item">
-            <a class="nav-link" style="color:#ffffff" href="adminMain">回首頁</a>
+        <div class="nav-item" style="position:absolute;">
+            <a class="nav-link" href="adminMain">回首頁</a>
         </div>
-        <div class="nav-item" style="right: 0px;position: fixed">
-            <a href="logout" style="color:#ffffff"><span class="glyphicon glyphicon-log-in" ></span> 登出/管理員</a></li>
+        <div class="nav-item" style="position:absolute; right:0px;">
+            <a href="logout"><span class="glyphicon glyphicon-log-in" ></span> 登出/管理員</a></li>
 <%--            <a class="nav-link" href="#">登出/管理員</a>--%>
         </div>
     </ul>
@@ -52,4 +52,3 @@
             <li><a href="logout"><span class="glyphicon glyphicon-log-in"></span> 登出</a></li>
         </ul>
     </div>--%>
-</nav>

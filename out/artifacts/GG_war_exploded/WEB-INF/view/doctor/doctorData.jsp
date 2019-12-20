@@ -23,43 +23,42 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="resources/css/login.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/noscript.css"/>
 </head>
 <body>
     <div class="container-fluid">
         <div class="col-sm-13">
             <div class="panel panel-info">
-                <div class="panel-heading"><h4><span class="glyphicon glyphicon-user">個人資料</span></h4></div>
+                <div class="panel-heading"><h4><span class="glyphicon glyphicon-user"></span></h4></div>
                 <div class="panel-body">
                     <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <th colspan="5" class="text-center">帳戶管理</th>
+                            <th colspan="6" class="text-center">個人資料</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <th class="text-center">帳號</th>
                             <th class="text-center">姓名</th>
-                            <th class="text-center">權限</th>
-                            <th class="text-center">電子郵件</th>
+                            <th class="text-center">性別</th>
+                            <th class="text-center">地址</th>
+                            <th class="text-center">生日</th>
+                            <th class="text-center">身分證字號</th>
+                            <th class="text-center">科別</th>
                         </tr>
-                        <c:forEach items="${memberList}" var="member" varStatus="status">
-                            <tr class="text-center">
-                                <td>${member.getIdNumber()}</td>
-                                <td>${member.getChineseName()}</td>
-                                <td>${member.getPhone()}</td>
-                                <td>${member.getEmail()}</td>
-                            </tr>
-                        </c:forEach>
-                        <c:if test = "${fn:length(memberList) == 0}">
-                            <tr class="text-center">
-                                <td colspan="5">查無資料</td>
-                            </tr>
-                        </c:if>
+                        <tr class="text-center">
+                            <td class="text-center">${i.getName().get(0).getText()}</td>
+                            <td class="text-center">${i.getGender()}</td>
+                            <td class="text-center">${i.getAddress().get(0).getText()}</td>
+                            <td class="text-center">${birthday}</td>
+                            <td class="text-center">${i.getIdentifier().get(0).getValue()}</td>
+                            <td class="text-center">${i.getIdentifier().get(1).getValue()}</td>
+                        </tr>
                         </tbody>
                     </table>
-                    <button type='button' data-toggle='modal' data-target='#insert' class='btn btn-primary'>修改</button>
+                    <button type='button' data-toggle='modal' data-target='#insert' class='btn btn-primary' style="background-color: rgba(255,255,255,0.51);width:100px;height:50px;border-color:#000000;">修改</button>
                 </div>
             </div>
         </div>
@@ -69,24 +68,23 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="title">新增帳戶</h5>
+                    <h5 class="modal-title" id="title">修改帳戶</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="account" class="col-form-label">職員編號：</label>
+                        <label for="account" class="col-form-label">帳號：</label>
                         <input type="text" class="form-control" id="account" name="account" value="${latestId}" readonly="readonly" required>
-                        <label for="chinese_name" class="col-form-label">中文名：</label>
+                        <label for="chinese_name" class="col-form-label">姓名：</label>
                         <input type="text" class="form-control" id="chinese_name" name="chinese_name" required>
-                        <label for="english_name" class="col-form-label">英文名：</label>
-                        <input type="text" class="form-control" id="english_name" name="english_name" required>
-                        <label for="role_code" class="col-form-label">角色代碼：</label>
-                        <select class="form-control" id="role_code" name="role_code">
-                            <option value="1">1：Product Owner</option>
-                            <option value="2">2：Developer</option>
-                        </select>
+                        <label for="password" class="col-form-label">密碼</label>
+                        <input type="text" class="form-control" id="password" name="password" required>
+                        <label for="priority" class="col-form-label">權限：</label>
+                        <input type="text" class="form-control" id="priority" name="priority" value="${latestId}" readonly="readonly" required>
+                        <label for="e-mail" class="col-form-label">電子郵件：</label>
+                        <input type="text" class="form-control" id="e-mail" name="e-mail" required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -97,5 +95,10 @@
         </div>
     </div>
 </form>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
